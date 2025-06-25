@@ -63,20 +63,29 @@ main {
 
 /* Hero Section */
 .hero {
-    /* Updated: Path to the image in the 'images' folder */
-    background: url('') no-repeat center center/cover;
-    color: #fff;
+    /* Removed background image from here as we are using an <img> tag */
+    color: #fff; /* Keep text color for content */
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px; /* Adjust padding as image will take space */
     border-radius: 10px;
     margin-bottom: 40px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: #34495e; /* Add a background color for the hero section */
+}
+
+.hero img {
+    max-width: 100%; /* Ensures the image is never wider than its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below the image */
+    margin: 0 auto 20px auto; /* Centers the image and adds space below */
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
 }
 
 .hero h2 {
     font-size: 3.5em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #f39c12; /* Match the retro orange theme */
 }
 
 .hero p {
@@ -84,6 +93,7 @@ main {
     max-width: 700px;
     margin: 0 auto 30px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    color: #ecf0f1; /* Lighter text for readability on dark background */
 }
 
 .hero button {
